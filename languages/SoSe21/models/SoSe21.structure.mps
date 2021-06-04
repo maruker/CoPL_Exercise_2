@@ -14,6 +14,7 @@
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
         <property id="4628067390765956802" name="abstract" index="R5$K7" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
+        <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
@@ -22,6 +23,10 @@
         <property id="1096454100552" name="rootable" index="19KtqR" />
         <reference id="1071489389519" name="extends" index="1TJDcQ" />
         <child id="1169129564478" name="implements" index="PzmwI" />
+      </concept>
+      <concept id="1071489288299" name="jetbrains.mps.lang.structure.structure.PropertyDeclaration" flags="ig" index="1TJgyi">
+        <property id="241647608299431129" name="propertyId" index="IQ2nx" />
+        <reference id="1082985295845" name="dataType" index="AX2Wp" />
       </concept>
       <concept id="1071489288298" name="jetbrains.mps.lang.structure.structure.LinkDeclaration" flags="ig" index="1TJgyj">
         <property id="1071599776563" name="role" index="20kJfa" />
@@ -57,6 +62,11 @@
     <property role="EcuMT" value="2194840203816666554" />
     <property role="TrG5h" value="IntDeclaration" />
     <ref role="1TJDcQ" node="1TPCS_vfkvj" resolve="VariableDeclaration" />
+    <node concept="1TJgyi" id="kK5cNRFIRa" role="1TKVEl">
+      <property role="IQ2nx" value="373821639633071562" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1TPCS_vfgmX">
     <property role="EcuMT" value="2194840203816666557" />
@@ -80,8 +90,33 @@
   </node>
   <node concept="1TIwiD" id="1FIy6kHZlTz">
     <property role="EcuMT" value="1940638457587916387" />
-    <property role="TrG5h" value="Addition" />
+    <property role="TrG5h" value="AdditionRef" />
     <ref role="1TJDcQ" node="1DQJKnLEeGF" resolve="Expression" />
+    <node concept="1TJgyj" id="kK5cNRFIRD" role="1TKVEi">
+      <property role="IQ2ns" value="373821639633071593" />
+      <property role="20kJfa" value="ref" />
+      <ref role="20lvS9" node="1TPCS_vfgmU" resolve="IntDeclaration" />
+    </node>
+    <node concept="1TJgyi" id="kK5cNRFIS_" role="1TKVEl">
+      <property role="IQ2nx" value="373821639633071653" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="kK5cNRFITp">
+    <property role="EcuMT" value="373821639633071705" />
+    <property role="TrG5h" value="AdditionValues" />
+    <ref role="1TJDcQ" node="1DQJKnLEeGF" resolve="Expression" />
+    <node concept="1TJgyi" id="kK5cNRFITq" role="1TKVEl">
+      <property role="IQ2nx" value="373821639633071706" />
+      <property role="TrG5h" value="valueLeft" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="kK5cNRFITs" role="1TKVEl">
+      <property role="IQ2nx" value="373821639633071708" />
+      <property role="TrG5h" value="valueRight" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
   </node>
 </model>
 
