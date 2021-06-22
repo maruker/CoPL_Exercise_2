@@ -12,16 +12,20 @@ import com.mbeddr.mpsutil.interpreter.rt.IContext;
 import com.mbeddr.mpsutil.interpreter.rt.ICoverageAnalyzer;
 import com.mbeddr.mpsutil.interpreter.rt.ComputationTrace;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import SoSe21.plugin.WorksheetValue;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import com.mbeddr.mpsutil.interpreter.rt.StopAndReturnException;
 import com.mbeddr.mpsutil.interpreter.rt.InterpreterEscapeException;
 import com.mbeddr.mpsutil.interpreter.rt.InterpreterRuntimeException;
 import com.mbeddr.mpsutil.interpreter.rt.EvaluatorInfo;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import com.mbeddr.mpsutil.interpreter.rt.ITypeMapper;
 import com.mbeddr.mpsutil.interpreter.rt.IRelationship;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SConcept;
+import org.jetbrains.mps.openapi.language.SProperty;
 
 public class InterpreterSoSe21Interpreter extends InterpreterBase {
   public InterpreterSoSe21Interpreter() {
@@ -35,6 +39,8 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
+          WorksheetValue value = new WorksheetValue();
+          context.getEnvironment().put(WorksheetValue.BASE_NODE, value);
 
           for (SNode n : SLinkOperations.getChildren(node, LINKS.properties$FFKh)) {
             Object ignore = context.getRootInterpreter().evaluate(n, context, coverage, trace, false);
@@ -69,8 +75,18 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
+          WorksheetValue value = new WorksheetValue();
 
-          return 0;
+          SNodeOperations.getChildren(SNodeOperations.getParent(node));
+
+          for (SNode n : SLinkOperations.getChildren(((SNode) SNodeOperations.getParent(node)), LINKS.properties$FFKh)) {
+            if (n instanceof SNode) {
+              value.saveIntValue(SPropertyOperations.getString(n, PROPS.name$MnvL), SPropertyOperations.getInteger(((SNode) n), PROPS.value$TdXp));
+            }
+          }
+
+          int refValue = value.getIntValue(SPropertyOperations.getString(SLinkOperations.getTarget(node, LINKS.ref$94GI), PROPS.name$MnvL));
+          return refValue + SPropertyOperations.getInteger(node, PROPS.value$c94N);
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -99,7 +115,9 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
+          WorksheetValue value = (WorksheetValue) context.getEnvironment().get(WorksheetValue.BASE_NODE);
 
+          value.saveIntValue(SPropertyOperations.getString(node, PROPS.name$MnvL), SPropertyOperations.getInteger(node, PROPS.value$TdXp));
           return null;
         } catch (StopAndReturnException stop) {
           return stop.value();
@@ -136,11 +154,18 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink properties$FFKh = MetaAdapterFactory.getContainmentLink(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3bfb97L, 0x1e75a3895f3c66eeL, "properties");
+    /*package*/ static final SReferenceLink ref$94GI = MetaAdapterFactory.getReferenceLink(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1aee88652dfd5e63L, 0x53014ccf7aeede9L, "ref");
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept Worksheet$QJ = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3bfb97L, "SoSe21.structure.Worksheet");
     /*package*/ static final SConcept AdditionRef$F9 = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1aee88652dfd5e63L, "SoSe21.structure.AdditionRef");
     /*package*/ static final SConcept IntDeclaration$Zi = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3d05baL, "SoSe21.structure.IntDeclaration");
+  }
+
+  private static final class PROPS {
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty value$TdXp = MetaAdapterFactory.getProperty(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3d05baL, 0x53014ccf7aeedcaL, "value");
+    /*package*/ static final SProperty value$c94N = MetaAdapterFactory.getProperty(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1aee88652dfd5e63L, 0x53014ccf7aeee25L, "value");
   }
 }
