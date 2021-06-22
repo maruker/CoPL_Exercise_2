@@ -12,6 +12,12 @@
       </concept>
     </language>
     <language id="2101cba8-c59b-492a-be83-2a9e24bb3df8" name="SoSe21">
+      <concept id="7855388964638805464" name="SoSe21.structure.EqualOperator" flags="ng" index="2$OzXW" />
+      <concept id="7855388964638772203" name="SoSe21.structure.BoolExpression" flags="ng" index="2$OF_f">
+        <property id="7855388964638772204" name="valueLeft" index="2$OF_8" />
+        <property id="7855388964638772206" name="valueRight" index="2$OF_a" />
+        <child id="7855388964638805442" name="symbol" index="2$OzXA" />
+      </concept>
       <concept id="1940638457587916387" name="SoSe21.structure.AdditionRef" flags="ng" index="R4Xo6">
         <property id="373821639633071653" name="value" index="3MBJFD" />
         <reference id="373821639633071593" name="ref" index="3MBJ$_" />
@@ -52,6 +58,11 @@
     <node concept="R4Xo6" id="kK5cNRGaBU" role="11islB">
       <property role="3MBJFD" value="10" />
       <ref role="3MBJ$_" node="1TPCS_vfosd" resolve="wk1int" />
+    </node>
+    <node concept="2$OF_f" id="6O3WEj9OJBQ" role="11islB">
+      <property role="2$OF_8" value="10" />
+      <property role="2$OF_a" value="20" />
+      <node concept="2$OzXW" id="6O3WEj9OJC1" role="2$OzXA" />
     </node>
   </node>
   <node concept="11j_wu" id="1DQJKnLE3vC">

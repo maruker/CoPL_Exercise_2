@@ -118,5 +118,60 @@
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
+  <node concept="1TIwiD" id="6O3WEj9OkJF">
+    <property role="EcuMT" value="7855388964638772203" />
+    <property role="TrG5h" value="BoolExpression" />
+    <ref role="1TJDcQ" node="1DQJKnLEeGF" resolve="Expression" />
+    <node concept="1TJgyi" id="6O3WEj9OkJG" role="1TKVEl">
+      <property role="IQ2nx" value="7855388964638772204" />
+      <property role="TrG5h" value="valueLeft" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="6O3WEj9OkJI" role="1TKVEl">
+      <property role="IQ2nx" value="7855388964638772206" />
+      <property role="TrG5h" value="valueRight" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="6O3WEj9OsR2" role="1TKVEi">
+      <property role="IQ2ns" value="7855388964638805442" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="symbol" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="6O3WEj9OsRl" resolve="BoolOperator" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6O3WEj9OsQd">
+    <property role="EcuMT" value="7855388964638805389" />
+    <property role="TrG5h" value="BoolExpressionRef" />
+    <ref role="1TJDcQ" node="1DQJKnLEeGF" resolve="Expression" />
+    <node concept="1TJgyi" id="6O3WEj9OsQe" role="1TKVEl">
+      <property role="IQ2nx" value="7855388964638805390" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="6O3WEj9OsQg" role="1TKVEi">
+      <property role="IQ2ns" value="7855388964638805392" />
+      <property role="20kJfa" value="ref" />
+      <ref role="20lvS9" node="1TPCS_vfgmU" resolve="IntDeclaration" />
+    </node>
+    <node concept="1TJgyj" id="6O3WEj9OsR7" role="1TKVEi">
+      <property role="IQ2ns" value="7855388964638805447" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="symbol" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="6O3WEj9OsRl" resolve="BoolOperator" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6O3WEj9OsRl">
+    <property role="EcuMT" value="7855388964638805461" />
+    <property role="TrG5h" value="BoolOperator" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="6O3WEj9OsRo">
+    <property role="EcuMT" value="7855388964638805464" />
+    <property role="TrG5h" value="EqualOperator" />
+    <ref role="1TJDcQ" node="6O3WEj9OsRl" resolve="BoolOperator" />
+  </node>
 </model>
 

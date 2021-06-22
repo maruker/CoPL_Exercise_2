@@ -44,6 +44,7 @@
       <concept id="1219418625346" name="jetbrains.mps.lang.editor.structure.IStyleContainer" flags="ng" index="3F0Thp">
         <child id="1219418656006" name="styleItem" index="3F10Kt" />
       </concept>
+      <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY" />
       <concept id="1073390211982" name="jetbrains.mps.lang.editor.structure.CellModel_RefNodeList" flags="sg" stub="2794558372793454595" index="3F2HdR" />
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
@@ -160,6 +161,27 @@
         <property role="3F0ifm" value=";" />
       </node>
       <node concept="l2Vlx" id="kK5cNRFIT$" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="6O3WEj9OsQi">
+    <ref role="1XX52x" to="umuk:6O3WEj9OkJF" resolve="BoolExpression" />
+    <node concept="3EZMnI" id="6O3WEj9OsQk" role="2wV5jI">
+      <node concept="3F0A7n" id="6O3WEj9OsQr" role="3EZMnx">
+        <ref role="1NtTu8" to="umuk:6O3WEj9OkJG" resolve="valueLeft" />
+      </node>
+      <node concept="3F1sOY" id="6O3WEj9OsS6" role="3EZMnx">
+        <ref role="1NtTu8" to="umuk:6O3WEj9OsR2" resolve="symbol" />
+      </node>
+      <node concept="3F0A7n" id="6O3WEj9OsQD" role="3EZMnx">
+        <ref role="1NtTu8" to="umuk:6O3WEj9OkJI" resolve="valueRight" />
+      </node>
+      <node concept="l2Vlx" id="6O3WEj9OsQn" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="6O3WEj9OsRN">
+    <ref role="1XX52x" to="umuk:6O3WEj9OsRo" resolve="EqualOperator" />
+    <node concept="3F0ifn" id="6O3WEj9OsRW" role="2wV5jI">
+      <property role="3F0ifm" value="==" />
     </node>
   </node>
 </model>

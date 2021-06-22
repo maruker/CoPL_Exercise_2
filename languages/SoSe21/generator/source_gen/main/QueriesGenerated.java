@@ -15,7 +15,6 @@ import jetbrains.mps.generator.impl.query.SourceNodesQuery;
 import java.util.HashMap;
 import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.generator.impl.query.QueryKey;
-import jetbrains.mps.generator.impl.query.QueryKeyImpl;
 import java.util.Collection;
 import jetbrains.mps.generator.impl.GenerationFailureException;
 import jetbrains.mps.util.IterableUtil;
@@ -32,16 +31,16 @@ public class QueriesGenerated extends QueryProviderBase {
     super(1);
   }
   public static Object propertyMacro_GetValue_1_0(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.name$tAp1);
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
   }
   public static Object propertyMacro_GetValue_1_1(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.name$tAp1);
+    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
   }
   public static Iterable<SNode> sourceNodesQuery_1_0(final SourceSubstituteMacroNodesContext _context) {
-    return SNodeOperations.ofConcept(SLinkOperations.getChildren(_context.getNode(), LINKS.properties$5Jb0), CONCEPTS.IntDeclaration$$1);
+    return SNodeOperations.ofConcept(SLinkOperations.getChildren(_context.getNode(), LINKS.properties$FFKh), CONCEPTS.IntDeclaration$Zi);
   }
   public static Iterable<SNode> sourceNodesQuery_1_1(final SourceSubstituteMacroNodesContext _context) {
-    return SNodeOperations.ofConcept(SLinkOperations.getChildren(_context.getNode(), LINKS.properties$5Jb0), CONCEPTS.BooleanDeclaration$_u);
+    return SNodeOperations.ofConcept(SLinkOperations.getChildren(_context.getNode(), LINKS.properties$FFKh), CONCEPTS.BooleanDeclaration$J);
   }
   private final Map<String, SourceNodesQuery> snsqMethods = new HashMap<String, SourceNodesQuery>();
   {
@@ -52,11 +51,8 @@ public class QueriesGenerated extends QueryProviderBase {
   @NotNull
   @Override
   public SourceNodesQuery getSourceNodesQuery(@NotNull QueryKey identity) {
-    final String id = ((QueryKeyImpl) identity).getQueryNodeId().toString();
-    if (!(snsqMethods.containsKey(id))) {
-      return super.getSourceNodesQuery(identity);
-    }
-    return snsqMethods.get(id);
+    SourceNodesQuery query = identity.forFunctionNode(snsqMethods);
+    return (query != null ? query : super.getSourceNodesQuery(identity));
   }
   private static class SNsQ implements SourceNodesQuery {
     private final int methodKey;
@@ -84,11 +80,8 @@ public class QueriesGenerated extends QueryProviderBase {
   @NotNull
   @Override
   public PropertyValueQuery getPropertyValueQuery(@NotNull QueryKey identity) {
-    final String id = identity.getTemplateNode().getNodeId().toString();
-    if (!(pvqMethods.containsKey(id))) {
-      return super.getPropertyValueQuery(identity);
-    }
-    return pvqMethods.get(id);
+    PropertyValueQuery query = identity.forTemplateNode(pvqMethods);
+    return (query != null ? query : super.getPropertyValueQuery(identity));
   }
   private static class PVQ extends PropertyValueQuery.Base {
     private final int methodKey;
@@ -110,15 +103,15 @@ public class QueriesGenerated extends QueryProviderBase {
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty name$tAp1 = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink properties$5Jb0 = MetaAdapterFactory.getContainmentLink(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3bfb97L, 0x1e75a3895f3c66eeL, "properties");
+    /*package*/ static final SContainmentLink properties$FFKh = MetaAdapterFactory.getContainmentLink(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3bfb97L, 0x1e75a3895f3c66eeL, "properties");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept IntDeclaration$$1 = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3d05baL, "SoSe21.structure.IntDeclaration");
-    /*package*/ static final SConcept BooleanDeclaration$_u = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3d05bdL, "SoSe21.structure.BooleanDeclaration");
+    /*package*/ static final SConcept IntDeclaration$Zi = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3d05baL, "SoSe21.structure.IntDeclaration");
+    /*package*/ static final SConcept BooleanDeclaration$J = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3d05bdL, "SoSe21.structure.BooleanDeclaration");
   }
 }
