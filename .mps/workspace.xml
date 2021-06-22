@@ -17,9 +17,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22db0ce4-5c79-4c47-827a-a38692e19e59" name="Default Changelist" comment="Clean up repository">
-      <change afterPath="$PROJECT_DIR$/solutions/SoSe21.test.interpreter/SoSe21.test.interpreter.msd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/SoSe21.test.interpreter/models/SoSe21.test.interpreter.plugin.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mps/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.mps/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/SoSe21/generator/classes_gen/main/QueriesGenerated$CONCEPTS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/SoSe21/generator/classes_gen/main/QueriesGenerated$CONCEPTS.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/SoSe21/generator/classes_gen/main/QueriesGenerated$LINKS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/SoSe21/generator/classes_gen/main/QueriesGenerated$LINKS.class" afterDir="false" />
@@ -31,6 +28,10 @@
       <change beforePath="$PROJECT_DIR$/languages/SoSe21/generator/source_gen.caches/main/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/SoSe21/generator/source_gen.caches/main/dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/SoSe21/generator/source_gen/main/QueriesGenerated.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/SoSe21/generator/source_gen/main/QueriesGenerated.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/SoSe21/generator/source_gen/main/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/SoSe21/generator/source_gen/main/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/SoSe21/models/SoSe21.editor.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/SoSe21/models/SoSe21.editor.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/SoSe21/models/SoSe21.structure.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/SoSe21/models/SoSe21.structure.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/SoSe21/models/SoSe21.typesystem.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/SoSe21/models/SoSe21.typesystem.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/SoSe21/sandbox/models/SoSe21.sandbox.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/SoSe21/sandbox/models/SoSe21.sandbox.mps" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,14 +100,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
   </component>
   <component name="MPSBookmarkManager">
     <option name="myBookmarkInfos">
@@ -387,78 +380,6 @@
               <option name="myItemId" value="288d5a62-1743-40e4-a675-9dd72e0f8654" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoPL_Exercise_2" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoPL_Exercise_2" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2101cba8-c59b-492a-be83-2a9e24bb3df8(SoSe21)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:fb17ed08-e595-46a4-a07f-7c16c537ac52(SoSe21.editor) in IdeaFile[path: C:/Users/Christian/MPSProjects/Project/CoPL_Exercise_2/languages/SoSe21/models/SoSe21.editor.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoPL_Exercise_2" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="6418229f-1f3e-46a3-80f5-59b341a58460" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SoSe21" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:2a294d9b-1379-400d-8da0-08da256ab8da(SoSe21.test.interpreter.plugin) in IdeaFile[path: C:/Users/Christian/MPSProjects/Project/CoPL_Exercise_2/solutions/SoSe21.test.interpreter/models/SoSe21.test.interpreter.plugin.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoPL_Exercise_2" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2101cba8-c59b-492a-be83-2a9e24bb3df8(SoSe21)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:9278d556-1252-4411-8e7f-f391a46cb61a(SoSe21.behavior) in IdeaFile[path: C:/Users/Christian/MPSProjects/Project/CoPL_Exercise_2/languages/SoSe21/models/SoSe21.behavior.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoPL_Exercise_2" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2101cba8-c59b-492a-be83-2a9e24bb3df8(SoSe21)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoPL_Exercise_2" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="288d5a62-1743-40e4-a675-9dd72e0f8654" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SoSe21" />
               <option name="myItemType" value="" />
@@ -478,7 +399,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:7d04789c-b47e-457a-a479-66494068fea6(SoSe21.constraints) in IdeaFile[path: C:/Users/Christian/MPSProjects/Project/CoPL_Exercise_2/languages/SoSe21/models/SoSe21.constraints.mps]" />
+              <option name="myItemId" value="r:9278d556-1252-4411-8e7f-f391a46cb61a(SoSe21.behavior) in IdeaFile[path: C:/Users/Christian/MPSProjects/Project/CoPL_Exercise_2/languages/SoSe21/models/SoSe21.behavior.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -516,7 +437,11 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="6418229f-1f3e-46a3-80f5-59b341a58460" />
+              <option name="myItemId" value="2101cba8-c59b-492a-be83-2a9e24bb3df8(SoSe21)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:7d04789c-b47e-457a-a479-66494068fea6(SoSe21.constraints) in IdeaFile[path: C:/Users/Christian/MPSProjects/Project/CoPL_Exercise_2/languages/SoSe21/models/SoSe21.constraints.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -526,33 +451,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="6418229f-1f3e-46a3-80f5-59b341a58460" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SoSe21" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoPL_Exercise_2" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="6418229f-1f3e-46a3-80f5-59b341a58460" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SoSe21" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:2a294d9b-1379-400d-8da0-08da256ab8da(SoSe21.test.interpreter.plugin) in IdeaFile[path: C:/Users/Christian/MPSProjects/Project/CoPL_Exercise_2/solutions/SoSe21.test.interpreter/models/SoSe21.test.interpreter.plugin.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="373821639633185281" />
+              <option name="myItemId" value="288d5a62-1743-40e4-a675-9dd72e0f8654" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -566,25 +465,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SoSe21#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CoPL_Exercise_2" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="2101cba8-c59b-492a-be83-2a9e24bb3df8(SoSe21)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SoSe21#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:6ce44b0c-574c-44ab-a372-5829d5e158f8(main@generator) in IdeaFile[path: C:/Users/Christian/MPSProjects/Project/CoPL_Exercise_2/languages/SoSe21/generator/templates/main@generator.mps]" />
+              <option name="myItemId" value="r:fb17ed08-e595-46a4-a07f-7c16c537ac52(SoSe21.editor) in IdeaFile[path: C:/Users/Christian/MPSProjects/Project/CoPL_Exercise_2/languages/SoSe21/models/SoSe21.editor.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -602,13 +483,29 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CoPL_Exercise_2" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2101cba8-c59b-492a-be83-2a9e24bb3df8(SoSe21)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CoPL_Exercise_2" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
           <SELECTED>
             <PATH_ELEMENT>
               <option name="myItemId" value="CoPL_Exercise_2" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="6418229f-1f3e-46a3-80f5-59b341a58460" />
+              <option name="myItemId" value="288d5a62-1743-40e4-a675-9dd72e0f8654" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -616,7 +513,11 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:2a294d9b-1379-400d-8da0-08da256ab8da(SoSe21.test.interpreter.plugin) in IdeaFile[path: C:/Users/Christian/MPSProjects/Project/CoPL_Exercise_2/solutions/SoSe21.test.interpreter/models/SoSe21.test.interpreter.plugin.mps]" />
+              <option name="myItemId" value="r:fcae3cd3-1599-49a8-8f10-9ea4023d04c8(SoSe21.sandbox) in IdeaFile[path: C:/Users/Christian/MPSProjects/Project/CoPL_Exercise_2/languages/SoSe21/sandbox/models/SoSe21.sandbox.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2194840203816650269" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </SELECTED>
@@ -637,7 +538,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -651,14 +552,6 @@
       <option name="presentableId" value="Default" />
       <updated>1620307813056</updated>
     </task>
-    <task id="LOCAL-00001" summary="Clean up repository">
-      <created>1622805137955</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1622805137955</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UsagesViewTool">
@@ -695,5 +588,39 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Clean up repository" />
     <option name="LAST_COMMIT_MESSAGE" value="Clean up repository" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="532" y="345" key="#MPSPropertiesConfigurable" timestamp="1620308022011">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="532" y="345" key="#MPSPropertiesConfigurable/0.0.1920.1080@0.0.1920.1080" timestamp="1620308022011" />
+    <state x="660" y="452" width="600" height="200" key="#jetbrains.mps.vcs.mergedriver.MergeDriverOptionDialog" timestamp="1622542644169">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="660" y="452" width="600" height="200" key="#jetbrains.mps.vcs.mergedriver.MergeDriverOptionDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1622542644169" />
+    <state x="454" y="120" width="1018" height="871" key="CommitChangelistDialog2" timestamp="1622542771091">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="454" y="120" width="1018" height="871" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1622542771091" />
+    <state x="711" y="311" width="503" height="489" key="FileChooserDialogImpl" timestamp="1622801965633">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="711" y="311" width="503" height="489" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1622801965633" />
+    <state x="439" y="202" width="1042" height="706" key="SettingsEditor" timestamp="1622542977138">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="439" y="202" width="1042" height="706" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1622542977138" />
+    <state x="713" y="482" width="500" height="146" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1622543885351">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="713" y="482" width="500" height="146" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1622543885351" />
+    <state x="0" y="25" width="960" height="1055" key="dock-window-1" timestamp="1620310374967">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="0" y="25" width="960" height="1055" key="dock-window-1/0.0.1920.1080@0.0.1920.1080" timestamp="1620310374967" />
+    <state x="0" y="25" width="960" height="1055" key="dock-window-2" timestamp="1620310374968">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="0" y="25" width="960" height="1055" key="dock-window-2/0.0.1920.1080@0.0.1920.1080" timestamp="1620310374968" />
   </component>
 </project>
