@@ -77,8 +77,6 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
           coverage.visitedConcept(SNodeOperations.getConcept(node));
           WorksheetValue value = new WorksheetValue();
 
-          SNodeOperations.getChildren(SNodeOperations.getParent(node));
-
           for (SNode n : SLinkOperations.getChildren(((SNode) SNodeOperations.getParent(node)), LINKS.properties$FFKh)) {
             if (n instanceof SNode) {
               value.saveIntValue(SPropertyOperations.getString(n, PROPS.name$MnvL), SPropertyOperations.getInteger(((SNode) n), PROPS.value$TdXp));
