@@ -12,7 +12,7 @@
       </concept>
     </language>
     <language id="2101cba8-c59b-492a-be83-2a9e24bb3df8" name="SoSe21">
-      <concept id="7855388964638772203" name="SoSe21.structure.BoolExpression" flags="ng" index="2$OF_f">
+      <concept id="7855388964638772203" name="SoSe21.structure.BinaryBooleanExpression" flags="ng" index="2$OF_f">
         <child id="6405203617495643357" name="left" index="2Af2St" />
         <child id="6405203617495643359" name="right" index="2Af2Sv" />
       </concept>
@@ -37,18 +37,15 @@
       </concept>
       <concept id="6405203617495643317" name="SoSe21.structure.PlusExpression" flags="ng" index="2Af2TP" />
       <concept id="6405203617495555420" name="SoSe21.structure.MulExpression" flags="ng" index="2Afkus" />
-      <concept id="6405203617495509138" name="SoSe21.structure.VariableReference" flags="ng" index="2Afz9i">
+      <concept id="6405203617495509138" name="SoSe21.structure.IntReference" flags="ng" index="2Afz9i">
         <reference id="6405203617495509139" name="ref" index="2Afz9j" />
       </concept>
       <concept id="2194840203816666554" name="SoSe21.structure.IntDeclaration" flags="ng" index="11iaoN">
         <property id="373821639633071562" name="value" index="3MBJ$6" />
       </concept>
       <concept id="2194840203816666557" name="SoSe21.structure.BooleanDeclaration" flags="ng" index="11iaoO" />
-      <concept id="2194840203816666558" name="SoSe21.structure.Reference" flags="ng" index="11iaoR">
-        <reference id="1906921524488022965" name="variable" index="3FOhiK" />
-      </concept>
       <concept id="2194840203816598423" name="SoSe21.structure.Worksheet" flags="ng" index="11j_wu">
-        <child id="2194840203816625902" name="properties" index="11islB" />
+        <child id="2194840203816625902" name="statements" index="11islB" />
       </concept>
       <concept id="3985417080034970158" name="SoSe21.structure.NotEqualsExpression" flags="ng" index="3e3k6p" />
       <concept id="1906921524488104747" name="SoSe21.structure.Expression" flags="ng" index="3FR_gI" />
@@ -137,23 +134,16 @@
   </node>
   <node concept="11j_wu" id="1DQJKnLE3vC">
     <property role="TrG5h" value="wk2" />
-    <node concept="11iaoN" id="1DQJKnLEP9L" role="11islB">
-      <property role="TrG5h" value="int1" />
+    <node concept="2A0NjZ" id="1LGYzZqA9YC" role="11islB">
+      <node concept="11iaoN" id="1LGYzZqA9YO" role="2A0Ni2">
+        <property role="TrG5h" value="i" />
+        <property role="3MBJ$6" value="1" />
+      </node>
     </node>
-    <node concept="11iaoN" id="1DQJKnLESBi" role="11islB">
-      <property role="TrG5h" value="int2" />
-    </node>
-    <node concept="11iaoR" id="1DQJKnLFaFO" role="11islB">
-      <ref role="3FOhiK" node="1DQJKnLESBi" resolve="int2" />
-    </node>
-    <node concept="11iaoN" id="1DQJKnLESBs" role="11islB">
-      <property role="TrG5h" value="int3" />
-    </node>
-    <node concept="11iaoN" id="1DQJKnLESBM" role="11islB">
-      <property role="TrG5h" value="int4" />
-    </node>
-    <node concept="11iaoR" id="1DQJKnLFCFk" role="11islB">
-      <ref role="3FOhiK" node="1DQJKnLESBM" resolve="int4" />
+    <node concept="2A0NjZ" id="6Ew6r3lATe7" role="11islB">
+      <node concept="11iaoO" id="6Ew6r3lATe5" role="2A0Ni2">
+        <property role="TrG5h" value="bool1" />
+      </node>
     </node>
   </node>
 </model>
