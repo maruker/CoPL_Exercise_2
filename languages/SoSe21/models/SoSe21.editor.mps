@@ -21,6 +21,7 @@
       <concept id="1237303669825" name="jetbrains.mps.lang.editor.structure.CellLayout_Indent" flags="nn" index="l2Vlx" />
       <concept id="1237307900041" name="jetbrains.mps.lang.editor.structure.IndentLayoutIndentStyleClassItem" flags="ln" index="lj46D" />
       <concept id="1237308012275" name="jetbrains.mps.lang.editor.structure.IndentLayoutNewLineStyleClassItem" flags="ln" index="ljvvj" />
+      <concept id="1237375020029" name="jetbrains.mps.lang.editor.structure.IndentLayoutNewLineChildrenStyleClassItem" flags="ln" index="pj6Ft" />
       <concept id="1142886811589" name="jetbrains.mps.lang.editor.structure.ConceptFunctionParameter_node" flags="nn" index="pncrf" />
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
@@ -34,6 +35,9 @@
       <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
         <child id="1088186146602" name="editorComponent" index="1sWHZn" />
+      </concept>
+      <concept id="1236262245656" name="jetbrains.mps.lang.editor.structure.MatchingLabelStyleClassItem" flags="ln" index="3mYdg7">
+        <property id="1238091709220" name="labelName" index="1413C4" />
       </concept>
       <concept id="1223387125302" name="jetbrains.mps.lang.editor.structure.QueryFunction_Boolean" flags="in" index="3nzxsE" />
       <concept id="1088185857835" name="jetbrains.mps.lang.editor.structure.InlineEditorComponent" flags="ig" index="1sVBvm" />
@@ -453,6 +457,210 @@
           <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="4tgm0efwnw3">
+    <property role="3GE5qa" value="Function" />
+    <ref role="1XX52x" to="umuk:4tgm0efwnvV" resolve="NewFunction" />
+    <node concept="3EZMnI" id="4tgm0efwokz" role="2wV5jI">
+      <node concept="l2Vlx" id="4tgm0efwok$" role="2iSdaV" />
+      <node concept="3F0ifn" id="4tgm0efwok_" role="3EZMnx">
+        <property role="3F0ifm" value="def " />
+      </node>
+      <node concept="3F0A7n" id="4tgm0efwokA" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="4tgm0efwokB" role="3EZMnx">
+        <property role="3F0ifm" value="{" />
+        <node concept="3mYdg7" id="4tgm0efwokC" role="3F10Kt">
+          <property role="1413C4" value="body-brace" />
+        </node>
+        <node concept="ljvvj" id="4tgm0efwokD" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3EZMnI" id="4tgm0efwokE" role="3EZMnx">
+        <node concept="l2Vlx" id="4tgm0efwokF" role="2iSdaV" />
+        <node concept="lj46D" id="4tgm0efwokG" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="3F0ifn" id="4tgm0efwokH" role="3EZMnx">
+          <property role="3F0ifm" value="(" />
+        </node>
+        <node concept="3F2HdR" id="4tgm0efwokL" role="3EZMnx">
+          <ref role="1NtTu8" to="umuk:4tgm0efwnvW" resolve="parameters" />
+          <node concept="l2Vlx" id="4tgm0efwokM" role="2czzBx" />
+        </node>
+        <node concept="3F0ifn" id="4tgm0efxNGu" role="3EZMnx">
+          <property role="3F0ifm" value=") :" />
+          <node concept="ljvvj" id="4tgm0efxNGG" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F2HdR" id="4tgm0efwokW" role="3EZMnx">
+          <ref role="1NtTu8" to="umuk:4tgm0efwnvY" resolve="body" />
+          <node concept="l2Vlx" id="4tgm0efwokX" role="2czzBx" />
+          <node concept="pj6Ft" id="4tgm0efwokY" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="lj46D" id="4tgm0efwokZ" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="ljvvj" id="4tgm0efwol0" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F0ifn" id="4tgm0ef_rUa" role="3EZMnx">
+          <property role="3F0ifm" value="return" />
+        </node>
+        <node concept="3F1sOY" id="4tgm0ef_r5c" role="3EZMnx">
+          <ref role="1NtTu8" to="umuk:4tgm0ef_r4I" resolve="returnValue" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="4tgm0efwol1" role="3EZMnx">
+        <property role="3F0ifm" value="}" />
+        <node concept="3mYdg7" id="4tgm0efwol2" role="3F10Kt">
+          <property role="1413C4" value="body-brace" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="4tgm0efzY9O">
+    <property role="3GE5qa" value="Function.FunctionParameters" />
+    <ref role="1XX52x" to="umuk:4tgm0efzY9F" resolve="ParameterBool" />
+    <node concept="3EZMnI" id="4tgm0efzY9T" role="2wV5jI">
+      <node concept="3F0ifn" id="4tgm0efzY9U" role="3EZMnx">
+        <property role="3F0ifm" value="bool" />
+      </node>
+      <node concept="3F0A7n" id="4tgm0efzY9V" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="l2Vlx" id="4tgm0efzY9W" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4tgm0ef$H00">
+    <property role="3GE5qa" value="Function.FunctionParameters" />
+    <ref role="1XX52x" to="umuk:4tgm0ef$GZX" resolve="ParameterInt" />
+    <node concept="3EZMnI" id="4tgm0ef$H02" role="2wV5jI">
+      <node concept="3F0ifn" id="4tgm0ef$H03" role="3EZMnx">
+        <property role="3F0ifm" value="int" />
+      </node>
+      <node concept="3F0A7n" id="4tgm0ef$H04" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="l2Vlx" id="4tgm0ef$H05" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4tgm0efAaVh">
+    <property role="3GE5qa" value="Function.FunctionParameters" />
+    <ref role="1XX52x" to="umuk:4tgm0efAa34" resolve="ParameterRefBool" />
+    <node concept="1WcQYu" id="4tgm0efAaVj" role="2wV5jI">
+      <node concept="2ElW$n" id="4tgm0efAaVk" role="2El2Yn" />
+      <node concept="1iCGBv" id="4tgm0efAaVl" role="1LiK7o">
+        <ref role="1NtTu8" to="umuk:4tgm0efAa35" resolve="ref" />
+        <node concept="1sVBvm" id="4tgm0efAaVm" role="1sWHZn">
+          <node concept="3F0A7n" id="4tgm0efAaVn" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="4tgm0efAaVz">
+    <property role="3GE5qa" value="Function.FunctionParameters" />
+    <ref role="1XX52x" to="umuk:4tgm0efAa31" resolve="ParamRefInt" />
+    <node concept="1WcQYu" id="4tgm0efAaV_" role="2wV5jI">
+      <node concept="2ElW$n" id="4tgm0efAaVA" role="2El2Yn" />
+      <node concept="3EZMnI" id="4tgm0efNx0P" role="1LiK7o">
+        <node concept="3F0ifn" id="4tgm0efNx0W" role="3EZMnx">
+          <property role="3F0ifm" value="get" />
+        </node>
+        <node concept="1iCGBv" id="4tgm0efAaVB" role="3EZMnx">
+          <ref role="1NtTu8" to="umuk:4tgm0efAa32" resolve="ref" />
+          <node concept="1sVBvm" id="4tgm0efAaVC" role="1sWHZn">
+            <node concept="3F0A7n" id="4tgm0efAaVD" role="2wV5jI">
+              <property role="1Intyy" value="true" />
+              <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+            </node>
+          </node>
+        </node>
+        <node concept="l2Vlx" id="4tgm0efNx0S" role="2iSdaV" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="4tgm0efBHcX">
+    <property role="3GE5qa" value="Function" />
+    <ref role="1XX52x" to="umuk:4tgm0efAVNh" resolve="NewFunctionCall" />
+    <node concept="3EZMnI" id="4tgm0efDdez" role="2wV5jI">
+      <node concept="l2Vlx" id="4tgm0efDde$" role="2iSdaV" />
+      <node concept="1iCGBv" id="4tgm0efDdeB" role="3EZMnx">
+        <ref role="1NtTu8" to="umuk:4tgm0efAVNi" resolve="function" />
+        <node concept="1sVBvm" id="4tgm0efDdeC" role="1sWHZn">
+          <node concept="3F0A7n" id="4tgm0efDdeK" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="4tgm0efDdfq" role="3EZMnx">
+        <property role="3F0ifm" value="(" />
+      </node>
+      <node concept="3F2HdR" id="4tgm0efJtFl" role="3EZMnx">
+        <ref role="1NtTu8" to="umuk:4tgm0efDdgf" resolve="paramValuesInt" />
+        <node concept="l2Vlx" id="4tgm0efJtFn" role="2czzBx" />
+      </node>
+      <node concept="3F2HdR" id="4tgm0efJtFK" role="3EZMnx">
+        <ref role="1NtTu8" to="umuk:4tgm0efDdgb" resolve="paramValuesBool" />
+        <node concept="l2Vlx" id="4tgm0efJtFM" role="2czzBx" />
+      </node>
+      <node concept="3F0ifn" id="4tgm0efDdfX" role="3EZMnx">
+        <property role="3F0ifm" value=")" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="4tgm0efF$EU">
+    <property role="3GE5qa" value="Function.FunctionParameters" />
+    <ref role="1XX52x" to="umuk:4tgm0efF$EO" resolve="ParamDeclarationInteger" />
+    <node concept="3EZMnI" id="4tgm0efF$F9" role="2wV5jI">
+      <node concept="1iCGBv" id="4tgm0efF$Fg" role="3EZMnx">
+        <ref role="1NtTu8" to="umuk:4tgm0efF$ER" resolve="param" />
+        <node concept="1sVBvm" id="4tgm0efF$Fi" role="1sWHZn">
+          <node concept="3F0A7n" id="4tgm0efF$Fp" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="4tgm0efF$Fx" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="3F0A7n" id="4tgm0efH5gb" role="3EZMnx">
+        <ref role="1NtTu8" to="umuk:4tgm0efF$EP" resolve="value" />
+      </node>
+      <node concept="l2Vlx" id="4tgm0efF$Fc" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4tgm0efH5fL">
+    <property role="3GE5qa" value="Function.FunctionParameters" />
+    <ref role="1XX52x" to="umuk:4tgm0efH5fG" resolve="ParamDeclarationBool" />
+    <node concept="3EZMnI" id="4tgm0efH5fN" role="2wV5jI">
+      <node concept="1iCGBv" id="4tgm0efH5fO" role="3EZMnx">
+        <ref role="1NtTu8" to="umuk:4tgm0efH5fH" resolve="param" />
+        <node concept="1sVBvm" id="4tgm0efH5fP" role="1sWHZn">
+          <node concept="3F0A7n" id="4tgm0efH5fQ" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="4tgm0efH5fR" role="3EZMnx">
+        <property role="3F0ifm" value="=" />
+      </node>
+      <node concept="3F0A7n" id="4tgm0efH5fS" role="3EZMnx">
+        <ref role="1NtTu8" to="umuk:4tgm0efH5fJ" resolve="value" />
+      </node>
+      <node concept="l2Vlx" id="4tgm0efH5fT" role="2iSdaV" />
     </node>
   </node>
 </model>

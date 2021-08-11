@@ -337,5 +337,161 @@
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" node="1DQJKnLEeGF" resolve="Expression" />
   </node>
+  <node concept="1TIwiD" id="4tgm0efwnvV">
+    <property role="EcuMT" value="5138703947145508859" />
+    <property role="TrG5h" value="NewFunction" />
+    <property role="34LRSv" value="def" />
+    <property role="3GE5qa" value="Function" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4tgm0efwnvW" role="1TKVEi">
+      <property role="IQ2ns" value="5138703947145508860" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="parameters" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="4tgm0efzYa1" resolve="Parameter" />
+    </node>
+    <node concept="1TJgyj" id="4tgm0efwnvY" role="1TKVEi">
+      <property role="IQ2ns" value="5138703947145508862" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="body" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="5zzQG3YSeSW" resolve="IStatement" />
+    </node>
+    <node concept="1TJgyj" id="4tgm0ef_r4I" role="1TKVEi">
+      <property role="IQ2ns" value="5138703947146834222" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="returnValue" />
+      <ref role="20lvS9" node="6Ew6r3lkJDD" resolve="ArithmeticExpression" />
+    </node>
+    <node concept="PrWs8" id="4tgm0efzfML" role="PzmwI">
+      <ref role="PrY4T" node="5zzQG3YSeSW" resolve="IStatement" />
+    </node>
+    <node concept="PrWs8" id="4tgm0efzY9K" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4tgm0efzY9F">
+    <property role="EcuMT" value="5138703947146453611" />
+    <property role="TrG5h" value="ParameterBool" />
+    <property role="34LRSv" value="bool " />
+    <property role="3GE5qa" value="Function.FunctionParameters" />
+    <ref role="1TJDcQ" node="4tgm0efzYa1" resolve="Parameter" />
+    <node concept="PrWs8" id="4tgm0efzY9G" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyi" id="4tgm0efNwYn" role="1TKVEl">
+      <property role="IQ2nx" value="5138703947150528407" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4tgm0efzYa1">
+    <property role="EcuMT" value="5138703947146453633" />
+    <property role="TrG5h" value="Parameter" />
+    <property role="R5$K7" value="true" />
+    <property role="3GE5qa" value="Function.FunctionParameters" />
+    <ref role="1TJDcQ" node="1DQJKnLEeGF" resolve="Expression" />
+  </node>
+  <node concept="1TIwiD" id="4tgm0ef$GZX">
+    <property role="EcuMT" value="5138703947146645501" />
+    <property role="TrG5h" value="ParameterInt" />
+    <property role="34LRSv" value="int" />
+    <property role="3GE5qa" value="Function.FunctionParameters" />
+    <ref role="1TJDcQ" node="4tgm0efzYa1" resolve="Parameter" />
+    <node concept="PrWs8" id="4tgm0ef$GZY" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyi" id="4tgm0efNwYp" role="1TKVEl">
+      <property role="IQ2nx" value="5138703947150528409" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4tgm0efAa31">
+    <property role="EcuMT" value="5138703947147026625" />
+    <property role="TrG5h" value="ParamRefInt" />
+    <property role="34LRSv" value="paramRefInt" />
+    <property role="3GE5qa" value="Function.FunctionParameters" />
+    <ref role="1TJDcQ" node="6Ew6r3lkJDD" resolve="ArithmeticExpression" />
+    <node concept="1TJgyj" id="4tgm0efAa32" role="1TKVEi">
+      <property role="IQ2ns" value="5138703947147026626" />
+      <property role="20kJfa" value="ref" />
+      <ref role="20lvS9" node="4tgm0ef$GZX" resolve="ParameterInt" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4tgm0efAa34">
+    <property role="EcuMT" value="5138703947147026628" />
+    <property role="TrG5h" value="ParameterRefBool" />
+    <property role="34LRSv" value="paramRefBool" />
+    <property role="3GE5qa" value="Function.FunctionParameters" />
+    <ref role="1TJDcQ" node="6Ew6r3lkJDD" resolve="ArithmeticExpression" />
+    <node concept="1TJgyj" id="4tgm0efAa35" role="1TKVEi">
+      <property role="IQ2ns" value="5138703947147026629" />
+      <property role="20kJfa" value="ref" />
+      <ref role="20lvS9" node="4tgm0efzY9F" resolve="ParameterBool" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4tgm0efAVNh">
+    <property role="EcuMT" value="5138703947147230417" />
+    <property role="TrG5h" value="NewFunctionCall" />
+    <property role="3GE5qa" value="Function" />
+    <property role="34LRSv" value="callFunction" />
+    <ref role="1TJDcQ" node="6Ew6r3lkJDD" resolve="ArithmeticExpression" />
+    <node concept="1TJgyj" id="4tgm0efAVNi" role="1TKVEi">
+      <property role="IQ2ns" value="5138703947147230418" />
+      <property role="20kJfa" value="function" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="4tgm0efwnvV" resolve="NewFunction" />
+    </node>
+    <node concept="PrWs8" id="4tgm0efBHcV" role="PzmwI">
+      <ref role="PrY4T" node="5zzQG3YSeSW" resolve="IStatement" />
+    </node>
+    <node concept="1TJgyj" id="4tgm0efDdgf" role="1TKVEi">
+      <property role="IQ2ns" value="5138703947147826191" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="paramValuesInt" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="4tgm0efF$EO" resolve="ParamDeclarationInteger" />
+    </node>
+    <node concept="1TJgyj" id="4tgm0efDdgb" role="1TKVEi">
+      <property role="IQ2ns" value="5138703947147826187" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="paramValuesBool" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="4tgm0efH5fG" resolve="ParamDeclarationBool" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4tgm0efF$EO">
+    <property role="EcuMT" value="5138703947148446388" />
+    <property role="3GE5qa" value="Function.FunctionParameters" />
+    <property role="TrG5h" value="ParamDeclarationInteger" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="4tgm0efF$EP" role="1TKVEl">
+      <property role="IQ2nx" value="5138703947148446389" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="4tgm0efF$ER" role="1TKVEi">
+      <property role="IQ2ns" value="5138703947148446391" />
+      <property role="20kJfa" value="param" />
+      <ref role="20lvS9" node="4tgm0efzYa1" resolve="Parameter" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4tgm0efH5fG">
+    <property role="EcuMT" value="5138703947148841964" />
+    <property role="TrG5h" value="ParamDeclarationBool" />
+    <property role="3GE5qa" value="Function.FunctionParameters" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="4tgm0efH5fJ" role="1TKVEl">
+      <property role="IQ2nx" value="5138703947148841967" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyj" id="4tgm0efH5fH" role="1TKVEi">
+      <property role="IQ2ns" value="5138703947148841965" />
+      <property role="20kJfa" value="param" />
+      <ref role="20lvS9" node="4tgm0efzYa1" resolve="Parameter" />
+    </node>
+  </node>
 </model>
 
