@@ -10,6 +10,9 @@ public class EvalHelper {
 
   public static String eval(SNode n) {
     try {
+      // Reset all values before interpreting 
+      IntegerValues.getIntegerValues().clear();
+
       Object result = helper.evaluate(n);
       if (result != null) {
         return String.valueOf(result);

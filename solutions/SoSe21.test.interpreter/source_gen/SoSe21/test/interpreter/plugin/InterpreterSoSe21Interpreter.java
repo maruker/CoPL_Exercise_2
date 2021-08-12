@@ -12,7 +12,6 @@ import com.mbeddr.mpsutil.interpreter.rt.IContext;
 import com.mbeddr.mpsutil.interpreter.rt.ICoverageAnalyzer;
 import com.mbeddr.mpsutil.interpreter.rt.ComputationTrace;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import SoSe21.plugin.WorksheetValue;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import com.mbeddr.mpsutil.interpreter.rt.StopAndReturnException;
 import com.mbeddr.mpsutil.interpreter.rt.InterpreterEscapeException;
@@ -23,7 +22,6 @@ import com.mbeddr.mpsutil.interpreter.rt.ITypeMapper;
 import com.mbeddr.mpsutil.interpreter.rt.IRelationship;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SProperty;
 
@@ -39,10 +37,7 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          WorksheetValue value = new WorksheetValue();
-          context.getEnvironment().put(WorksheetValue.BASE_NODE, value);
-
-          for (SNode n : SLinkOperations.getChildren(node, LINKS.properties$FFKh)) {
+          for (SNode n : SLinkOperations.getChildren(node, LINKS.statements$FFKh)) {
             Object ignore = context.getRootInterpreter().evaluate(n, context, coverage, trace, false);
           }
 
@@ -69,37 +64,32 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.AdditionRef$F9, "r:261b5c8b-1234-48d8-ae31-4490835b79bb(SoSe21.test.interpreter.plugin)/1495905632393825106", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.PlusExpression$K8, "r:261b5c8b-1234-48d8-ae31-4490835b79bb(SoSe21.test.interpreter.plugin)/7683169211584818695", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          WorksheetValue value = new WorksheetValue();
+          System.err.println("Test");
+          int leftValue = (int) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$u$6L), context, coverage, trace, false);
+          int rightValue = (int) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$x2fj), context, coverage, trace, false);
 
-          for (SNode n : SLinkOperations.getChildren(((SNode) SNodeOperations.getParent(node)), LINKS.properties$FFKh)) {
-            if (n instanceof SNode) {
-              value.saveIntValue(SPropertyOperations.getString(n, PROPS.name$MnvL), SPropertyOperations.getInteger(((SNode) n), PROPS.value$TdXp));
-            }
-          }
-
-          int refValue = value.getIntValue(SPropertyOperations.getString(SLinkOperations.getTarget(node, LINKS.ref$94GI), PROPS.name$MnvL));
-          return refValue + SPropertyOperations.getInteger(node, PROPS.value$c94N);
+          return leftValue + rightValue;
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
           throw ex;
         } catch (RuntimeException ex) {
-          throw new InterpreterRuntimeException("AdditionRef()", node, ex, trace);
+          throw new InterpreterRuntimeException("+()", node, ex, trace);
         }
       }
       public EvaluatorInfo getInfo() {
-        return new EvaluatorInfo("AdditionRef");
+        return new EvaluatorInfo("PlusExpression");
       }
 
       @Override
       public String toString() {
-        return "AdditionRef";
+        return "PlusExpression";
       }
 
       @Override
@@ -107,31 +97,28 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
         return true;
       }
     });
-    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.IntDeclaration$Zi, "r:261b5c8b-1234-48d8-ae31-4490835b79bb(SoSe21.test.interpreter.plugin)/1495905632394077687", true) {
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.NumberLiteral$12, "r:261b5c8b-1234-48d8-ae31-4490835b79bb(SoSe21.test.interpreter.plugin)/7683169211585098816", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          WorksheetValue value = (WorksheetValue) context.getEnvironment().get(WorksheetValue.BASE_NODE);
-
-          value.saveIntValue(SPropertyOperations.getString(node, PROPS.name$MnvL), SPropertyOperations.getInteger(node, PROPS.value$TdXp));
-          return null;
+          return SPropertyOperations.getInteger(node, PROPS.value$x8jL);
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
           throw ex;
         } catch (RuntimeException ex) {
-          throw new InterpreterRuntimeException("IntDeclaration()", node, ex, trace);
+          throw new InterpreterRuntimeException("NumberLiteral()", node, ex, trace);
         }
       }
       public EvaluatorInfo getInfo() {
-        return new EvaluatorInfo("IntDeclaration");
+        return new EvaluatorInfo("NumberLiteral");
       }
 
       @Override
       public String toString() {
-        return "IntDeclaration";
+        return "NumberLiteral";
       }
 
       @Override
@@ -151,19 +138,18 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink properties$FFKh = MetaAdapterFactory.getContainmentLink(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3bfb97L, 0x1e75a3895f3c66eeL, "properties");
-    /*package*/ static final SReferenceLink ref$94GI = MetaAdapterFactory.getReferenceLink(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1aee88652dfd5e63L, 0x53014ccf7aeede9L, "ref");
+    /*package*/ static final SContainmentLink statements$FFKh = MetaAdapterFactory.getContainmentLink(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3bfb97L, 0x1e75a3895f3c66eeL, "statements");
+    /*package*/ static final SContainmentLink left$u$6L = MetaAdapterFactory.getContainmentLink(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fed95b2dL, 0x58e3dac0fed95b2eL, "left");
+    /*package*/ static final SContainmentLink right$x2fj = MetaAdapterFactory.getContainmentLink(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fed95b2dL, 0x58e3dac0fed95b30L, "right");
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept Worksheet$QJ = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3bfb97L, "SoSe21.structure.Worksheet");
-    /*package*/ static final SConcept AdditionRef$F9 = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1aee88652dfd5e63L, "SoSe21.structure.AdditionRef");
-    /*package*/ static final SConcept IntDeclaration$Zi = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3d05baL, "SoSe21.structure.IntDeclaration");
+    /*package*/ static final SConcept PlusExpression$K8 = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fedff4b5L, "SoSe21.structure.PlusExpression");
+    /*package*/ static final SConcept NumberLiteral$12 = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fed95b33L, "SoSe21.structure.NumberLiteral");
   }
 
   private static final class PROPS {
-    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty value$TdXp = MetaAdapterFactory.getProperty(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3d05baL, 0x53014ccf7aeedcaL, "value");
-    /*package*/ static final SProperty value$c94N = MetaAdapterFactory.getProperty(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1aee88652dfd5e63L, 0x53014ccf7aeee25L, "value");
+    /*package*/ static final SProperty value$x8jL = MetaAdapterFactory.getProperty(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fed95b33L, 0x58e3dac0fed95b34L, "value");
   }
 }
