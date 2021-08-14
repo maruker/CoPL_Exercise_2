@@ -233,7 +233,7 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
           int referenceValue = IntegerValues.getIntegerValues().get(SPropertyOperations.getString(SLinkOperations.getTarget(node, LINKS.ref$HscL), PROPS.name$MnvL));
-          System.err.println("Got value " + referenceValue + "of variable " + SPropertyOperations.getString(SLinkOperations.getTarget(node, LINKS.ref$HscL), PROPS.name$MnvL));
+          System.err.println("Got value " + referenceValue + " of variable " + SPropertyOperations.getString(SLinkOperations.getTarget(node, LINKS.ref$HscL), PROPS.name$MnvL));
           return referenceValue;
         } catch (StopAndReturnException stop) {
           return stop.value();
@@ -376,6 +376,36 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
         return true;
       }
     });
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.BooleanReference$nq, "r:261b5c8b-1234-48d8-ae31-4490835b79bb(SoSe21.test.interpreter.plugin)/6525741091654312213", true) {
+      public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
+        try {
+          coverage.visitedEvaluator(this);
+          coverage.visitedConcept(this.concept);
+          coverage.visitedConcept(SNodeOperations.getConcept(node));
+          // Ignore reference to boolean 
+          return 0;
+        } catch (StopAndReturnException stop) {
+          return stop.value();
+        } catch (InterpreterEscapeException ex) {
+          throw ex;
+        } catch (RuntimeException ex) {
+          throw new InterpreterRuntimeException("BooleanReference()", node, ex, trace);
+        }
+      }
+      public EvaluatorInfo getInfo() {
+        return new EvaluatorInfo("BooleanReference");
+      }
+
+      @Override
+      public String toString() {
+        return "BooleanReference";
+      }
+
+      @Override
+      public boolean canLookupBeCached() {
+        return true;
+      }
+    });
   }
 
 
@@ -406,6 +436,7 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
     /*package*/ static final SConcept NumberLiteral$12 = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fed95b33L, "SoSe21.structure.NumberLiteral");
     /*package*/ static final SConcept BooleanExpression$bJ = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x6aa019b0d5a6fb4dL, "SoSe21.structure.BooleanExpression");
     /*package*/ static final SConcept BooleanDeclaration$J = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3d05bdL, "SoSe21.structure.BooleanDeclaration");
+    /*package*/ static final SConcept BooleanReference$nq = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x6aa019b0d5961c78L, "SoSe21.structure.BooleanReference");
   }
 
   private static final class PROPS {
