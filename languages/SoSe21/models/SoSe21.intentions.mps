@@ -76,13 +76,13 @@
     </language>
   </registry>
   <node concept="2S6QgY" id="5zzQG3YTX36">
-    <property role="TrG5h" value="EvaluateAddition" />
-    <ref role="2ZfgGC" to="umuk:5zzQG3YRZiP" resolve="PlusExpression" />
+    <property role="TrG5h" value="EvaluateArithmeticExpression" />
+    <ref role="2ZfgGC" to="umuk:5zzQG3YQlGH" resolve="BinaryArithmeticExpression" />
     <node concept="2S6ZIM" id="5zzQG3YTX37" role="2ZfVej">
       <node concept="3clFbS" id="5zzQG3YTX38" role="2VODD2">
         <node concept="3clFbF" id="5zzQG3YTX88" role="3cqZAp">
           <node concept="Xl_RD" id="5zzQG3YTX87" role="3clFbG">
-            <property role="Xl_RC" value="Evaluate the addition" />
+            <property role="Xl_RC" value="Evaluate the arithmetic expression" />
           </node>
         </node>
       </node>

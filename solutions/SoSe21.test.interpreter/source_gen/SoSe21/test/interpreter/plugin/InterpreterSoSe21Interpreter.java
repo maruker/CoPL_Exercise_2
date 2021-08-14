@@ -22,6 +22,7 @@ import com.mbeddr.mpsutil.interpreter.rt.ITypeMapper;
 import com.mbeddr.mpsutil.interpreter.rt.IRelationship;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SReferenceLink;
 import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SProperty;
 
@@ -37,11 +38,12 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
+          // Evaluate all statements inside the worksheet 
           for (SNode n : SLinkOperations.getChildren(node, LINKS.statements$FFKh)) {
             Object ignore = context.getRootInterpreter().evaluate(n, context, coverage, trace, false);
           }
 
-          return null;
+          return 0;
         } catch (StopAndReturnException stop) {
           return stop.value();
         } catch (InterpreterEscapeException ex) {
@@ -64,13 +66,44 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
         return true;
       }
     });
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.ExpressionStatement$xp, "r:261b5c8b-1234-48d8-ae31-4490835b79bb(SoSe21.test.interpreter.plugin)/2380051097243833269", true) {
+      public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
+        try {
+          coverage.visitedEvaluator(this);
+          coverage.visitedConcept(this.concept);
+          coverage.visitedConcept(SNodeOperations.getConcept(node));
+          //  Evaluate the first child, which is the expression 
+          context.getRootInterpreter().evaluate(SNodeOperations.getChildren(node).get(0), context, coverage, trace, false);
+
+          return 0;
+        } catch (StopAndReturnException stop) {
+          return stop.value();
+        } catch (InterpreterEscapeException ex) {
+          throw ex;
+        } catch (RuntimeException ex) {
+          throw new InterpreterRuntimeException("ExpressionStatement()", node, ex, trace);
+        }
+      }
+      public EvaluatorInfo getInfo() {
+        return new EvaluatorInfo("ExpressionStatement");
+      }
+
+      @Override
+      public String toString() {
+        return "ExpressionStatement";
+      }
+
+      @Override
+      public boolean canLookupBeCached() {
+        return true;
+      }
+    });
     ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.PlusExpression$K8, "r:261b5c8b-1234-48d8-ae31-4490835b79bb(SoSe21.test.interpreter.plugin)/7683169211584818695", true) {
       public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
         try {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
-          System.err.println("Test");
           int leftValue = (int) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$u$6L), context, coverage, trace, false);
           int rightValue = (int) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$x2fj), context, coverage, trace, false);
 
@@ -90,6 +123,163 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
       @Override
       public String toString() {
         return "PlusExpression";
+      }
+
+      @Override
+      public boolean canLookupBeCached() {
+        return true;
+      }
+    });
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.MulExpression$YJ, "r:261b5c8b-1234-48d8-ae31-4490835b79bb(SoSe21.test.interpreter.plugin)/2380051097243492610", true) {
+      public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
+        try {
+          coverage.visitedEvaluator(this);
+          coverage.visitedConcept(this.concept);
+          coverage.visitedConcept(SNodeOperations.getConcept(node));
+          int leftValue = (int) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$u$6L), context, coverage, trace, false);
+          int rightValue = (int) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$x2fj), context, coverage, trace, false);
+
+          return leftValue * rightValue;
+        } catch (StopAndReturnException stop) {
+          return stop.value();
+        } catch (InterpreterEscapeException ex) {
+          throw ex;
+        } catch (RuntimeException ex) {
+          throw new InterpreterRuntimeException("*()", node, ex, trace);
+        }
+      }
+      public EvaluatorInfo getInfo() {
+        return new EvaluatorInfo("MulExpression");
+      }
+
+      @Override
+      public String toString() {
+        return "MulExpression";
+      }
+
+      @Override
+      public boolean canLookupBeCached() {
+        return true;
+      }
+    });
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.MinusExpression$Ze, "r:261b5c8b-1234-48d8-ae31-4490835b79bb(SoSe21.test.interpreter.plugin)/2380051097243501478", true) {
+      public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
+        try {
+          coverage.visitedEvaluator(this);
+          coverage.visitedConcept(this.concept);
+          coverage.visitedConcept(SNodeOperations.getConcept(node));
+          int leftValue = (int) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$u$6L), context, coverage, trace, false);
+          int rightValue = (int) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$x2fj), context, coverage, trace, false);
+
+          return leftValue - rightValue;
+        } catch (StopAndReturnException stop) {
+          return stop.value();
+        } catch (InterpreterEscapeException ex) {
+          throw ex;
+        } catch (RuntimeException ex) {
+          throw new InterpreterRuntimeException("-()", node, ex, trace);
+        }
+      }
+      public EvaluatorInfo getInfo() {
+        return new EvaluatorInfo("MinusExpression");
+      }
+
+      @Override
+      public String toString() {
+        return "MinusExpression";
+      }
+
+      @Override
+      public boolean canLookupBeCached() {
+        return true;
+      }
+    });
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.DivExpression$2v, "r:261b5c8b-1234-48d8-ae31-4490835b79bb(SoSe21.test.interpreter.plugin)/2380051097243505652", true) {
+      public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
+        try {
+          coverage.visitedEvaluator(this);
+          coverage.visitedConcept(this.concept);
+          coverage.visitedConcept(SNodeOperations.getConcept(node));
+          int leftValue = (int) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$u$6L), context, coverage, trace, false);
+          int rightValue = (int) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$x2fj), context, coverage, trace, false);
+
+          return leftValue / rightValue;
+        } catch (StopAndReturnException stop) {
+          return stop.value();
+        } catch (InterpreterEscapeException ex) {
+          throw ex;
+        } catch (RuntimeException ex) {
+          throw new InterpreterRuntimeException("/()", node, ex, trace);
+        }
+      }
+      public EvaluatorInfo getInfo() {
+        return new EvaluatorInfo("DivExpression");
+      }
+
+      @Override
+      public String toString() {
+        return "DivExpression";
+      }
+
+      @Override
+      public boolean canLookupBeCached() {
+        return true;
+      }
+    });
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.IntReference$CO, "r:261b5c8b-1234-48d8-ae31-4490835b79bb(SoSe21.test.interpreter.plugin)/2380051097243509708", true) {
+      public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
+        try {
+          coverage.visitedEvaluator(this);
+          coverage.visitedConcept(this.concept);
+          coverage.visitedConcept(SNodeOperations.getConcept(node));
+          int referenceValue = IntegerValues.getIntegerValues().get(SPropertyOperations.getString(SLinkOperations.getTarget(node, LINKS.ref$HscL), PROPS.name$MnvL));
+          System.err.println("Got value " + referenceValue + "of variable " + SPropertyOperations.getString(SLinkOperations.getTarget(node, LINKS.ref$HscL), PROPS.name$MnvL));
+          return referenceValue;
+        } catch (StopAndReturnException stop) {
+          return stop.value();
+        } catch (InterpreterEscapeException ex) {
+          throw ex;
+        } catch (RuntimeException ex) {
+          throw new InterpreterRuntimeException("IntReference()", node, ex, trace);
+        }
+      }
+      public EvaluatorInfo getInfo() {
+        return new EvaluatorInfo("IntReference");
+      }
+
+      @Override
+      public String toString() {
+        return "IntReference";
+      }
+
+      @Override
+      public boolean canLookupBeCached() {
+        return true;
+      }
+    });
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.IntDeclaration$Zi, "r:261b5c8b-1234-48d8-ae31-4490835b79bb(SoSe21.test.interpreter.plugin)/2380051097243515856", true) {
+      public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
+        try {
+          coverage.visitedEvaluator(this);
+          coverage.visitedConcept(this.concept);
+          coverage.visitedConcept(SNodeOperations.getConcept(node));
+          IntegerValues.getIntegerValues().set(SPropertyOperations.getString(node, PROPS.name$MnvL), SPropertyOperations.getInteger(node, PROPS.value$TdXp));
+          return 0;
+        } catch (StopAndReturnException stop) {
+          return stop.value();
+        } catch (InterpreterEscapeException ex) {
+          throw ex;
+        } catch (RuntimeException ex) {
+          throw new InterpreterRuntimeException("int()", node, ex, trace);
+        }
+      }
+      public EvaluatorInfo getInfo() {
+        return new EvaluatorInfo("IntDeclaration");
+      }
+
+      @Override
+      public String toString() {
+        return "IntDeclaration";
       }
 
       @Override
@@ -126,6 +316,66 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
         return true;
       }
     });
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.BooleanExpression$bJ, "r:261b5c8b-1234-48d8-ae31-4490835b79bb(SoSe21.test.interpreter.plugin)/2380051097243804654", true) {
+      public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
+        try {
+          coverage.visitedEvaluator(this);
+          coverage.visitedConcept(this.concept);
+          coverage.visitedConcept(SNodeOperations.getConcept(node));
+          // Ignore boolean expression 
+          return 0;
+        } catch (StopAndReturnException stop) {
+          return stop.value();
+        } catch (InterpreterEscapeException ex) {
+          throw ex;
+        } catch (RuntimeException ex) {
+          throw new InterpreterRuntimeException("BooleanExpression()", node, ex, trace);
+        }
+      }
+      public EvaluatorInfo getInfo() {
+        return new EvaluatorInfo("BooleanExpression");
+      }
+
+      @Override
+      public String toString() {
+        return "BooleanExpression";
+      }
+
+      @Override
+      public boolean canLookupBeCached() {
+        return true;
+      }
+    });
+    ListSequence.fromList(((List<IEvaluator>) evaluators)).addElement(new ConceptEvaluatorBase(CONCEPTS.BooleanDeclaration$J, "r:261b5c8b-1234-48d8-ae31-4490835b79bb(SoSe21.test.interpreter.plugin)/2380051097243805429", true) {
+      public Object evaluateEvaluator(SNode node, IContext context, ICoverageAnalyzer coverage, ComputationTrace trace) {
+        try {
+          coverage.visitedEvaluator(this);
+          coverage.visitedConcept(this.concept);
+          coverage.visitedConcept(SNodeOperations.getConcept(node));
+          // Ignore definition of boolean variable 
+          return 0;
+        } catch (StopAndReturnException stop) {
+          return stop.value();
+        } catch (InterpreterEscapeException ex) {
+          throw ex;
+        } catch (RuntimeException ex) {
+          throw new InterpreterRuntimeException("bool()", node, ex, trace);
+        }
+      }
+      public EvaluatorInfo getInfo() {
+        return new EvaluatorInfo("BooleanDeclaration");
+      }
+
+      @Override
+      public String toString() {
+        return "BooleanDeclaration";
+      }
+
+      @Override
+      public boolean canLookupBeCached() {
+        return true;
+      }
+    });
   }
 
 
@@ -141,15 +391,26 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
     /*package*/ static final SContainmentLink statements$FFKh = MetaAdapterFactory.getContainmentLink(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3bfb97L, 0x1e75a3895f3c66eeL, "statements");
     /*package*/ static final SContainmentLink left$u$6L = MetaAdapterFactory.getContainmentLink(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fed95b2dL, 0x58e3dac0fed95b2eL, "left");
     /*package*/ static final SContainmentLink right$x2fj = MetaAdapterFactory.getContainmentLink(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fed95b2dL, 0x58e3dac0fed95b30L, "right");
+    /*package*/ static final SReferenceLink ref$HscL = MetaAdapterFactory.getReferenceLink(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fedde892L, 0x58e3dac0fedde893L, "ref");
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept Worksheet$QJ = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3bfb97L, "SoSe21.structure.Worksheet");
+    /*package*/ static final SConcept ExpressionStatement$xp = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fee0ee3fL, "SoSe21.structure.ExpressionStatement");
     /*package*/ static final SConcept PlusExpression$K8 = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fedff4b5L, "SoSe21.structure.PlusExpression");
+    /*package*/ static final SConcept MulExpression$YJ = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fede9d5cL, "SoSe21.structure.MulExpression");
+    /*package*/ static final SConcept MinusExpression$Ze = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fede9d5dL, "SoSe21.structure.MinusExpression");
+    /*package*/ static final SConcept DivExpression$2v = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fed95b36L, "SoSe21.structure.DivExpression");
+    /*package*/ static final SConcept IntReference$CO = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fedde892L, "SoSe21.structure.IntReference");
+    /*package*/ static final SConcept IntDeclaration$Zi = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3d05baL, "SoSe21.structure.IntDeclaration");
     /*package*/ static final SConcept NumberLiteral$12 = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fed95b33L, "SoSe21.structure.NumberLiteral");
+    /*package*/ static final SConcept BooleanExpression$bJ = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x6aa019b0d5a6fb4dL, "SoSe21.structure.BooleanExpression");
+    /*package*/ static final SConcept BooleanDeclaration$J = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3d05bdL, "SoSe21.structure.BooleanDeclaration");
   }
 
   private static final class PROPS {
+    /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
+    /*package*/ static final SProperty value$TdXp = MetaAdapterFactory.getProperty(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3d05baL, 0x53014ccf7aeedcaL, "value");
     /*package*/ static final SProperty value$x8jL = MetaAdapterFactory.getProperty(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x58e3dac0fed95b33L, 0x58e3dac0fed95b34L, "value");
   }
 }

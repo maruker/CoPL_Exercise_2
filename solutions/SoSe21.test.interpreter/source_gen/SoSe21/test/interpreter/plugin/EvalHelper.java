@@ -4,6 +4,9 @@ package SoSe21.test.interpreter.plugin;
 
 import com.mbeddr.mpsutil.interpreter.rt.InterpreterEvaluationHelper;
 import org.jetbrains.mps.openapi.model.SNode;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import org.jetbrains.mps.openapi.language.SConcept;
+import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 public class EvalHelper {
   private static InterpreterEvaluationHelper helper = new InterpreterEvaluationHelper("arithmetic");
@@ -12,6 +15,9 @@ public class EvalHelper {
     try {
       // Reset all values before interpreting 
       IntegerValues.getIntegerValues().clear();
+
+      // Interpret the whole worksheet to save the values of variables 
+      helper.evaluate(SNodeOperations.getNodeAncestor(n, CONCEPTS.Worksheet$QJ, false, false));
 
       Object result = helper.evaluate(n);
       if (result != null) {
@@ -22,5 +28,9 @@ public class EvalHelper {
     } catch (Exception e) {
       return e.toString();
     }
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept Worksheet$QJ = MetaAdapterFactory.getConcept(0x2101cba8c59b492aL, 0xbe832a9e24bb3df8L, 0x1e75a3895f3bfb97L, "SoSe21.structure.Worksheet");
   }
 }
