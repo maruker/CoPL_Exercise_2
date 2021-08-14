@@ -23,6 +23,10 @@
         <property id="6405203617495210804" name="value" index="2AeC7O" />
       </concept>
       <concept id="6405203617495643317" name="SoSe21.structure.PlusExpression" flags="ng" index="2Af2TP" />
+      <concept id="6405203617495555420" name="SoSe21.structure.MulExpression" flags="ng" index="2Afkus" />
+      <concept id="6405203617495509138" name="SoSe21.structure.IntReference" flags="ng" index="2Afz9i">
+        <reference id="6405203617495509139" name="ref" index="2Afz9j" />
+      </concept>
       <concept id="7683169211582389368" name="SoSe21.structure.BooleanReference" flags="ng" index="2Zdwn8">
         <reference id="7683169211582389369" name="ref" index="2Zdwn9" />
       </concept>
@@ -77,23 +81,23 @@
       <property role="TrG5h" value="test_int2" />
       <property role="3MBJ$6" value="1" />
     </node>
-    <node concept="2A0NjZ" id="247CXNAfNGZ" role="11islB">
-      <node concept="2Zdwn8" id="247CXNAfNHe" role="2A0Ni2">
+    <node concept="2A0NjZ" id="5Eg5JaKcBGl" role="11islB">
+      <node concept="2Zdwn8" id="5Eg5JaKcBGj" role="2A0Ni2">
         <ref role="2Zdwn9" node="247CXNA5D2B" resolve="test_bool_2" />
       </node>
     </node>
-    <node concept="2A0NjZ" id="5Eg5JaK09Zl" role="11islB">
-      <node concept="2Af2TP" id="5Eg5JaK09Zm" role="2A0Ni2">
-        <node concept="2Af2TP" id="5Eg5JaK09Zn" role="2AeC7I">
-          <node concept="2AeC7N" id="5Eg5JaK09Zo" role="2AeC7I">
-            <property role="2AeC7O" value="1" />
-          </node>
-          <node concept="2AeC7N" id="5Eg5JaK09Zp" role="2AeC7K">
-            <property role="2AeC7O" value="1" />
-          </node>
+    <node concept="2A0NjZ" id="5Eg5JaKdxcf" role="11islB">
+      <node concept="2Af2TP" id="5Eg5JaKdxcg" role="2A0Ni2">
+        <node concept="2Afz9i" id="5Eg5JaKdwJD" role="2AeC7I">
+          <ref role="2Afz9j" node="247CXNAeSnf" resolve="test_int2" />
         </node>
-        <node concept="2AeC7N" id="5Eg5JaK09Zq" role="2AeC7K">
-          <property role="2AeC7O" value="1" />
+        <node concept="2Afkus" id="5Eg5JaKdxch" role="2AeC7K">
+          <node concept="2AeC7N" id="5Eg5JaKdxci" role="2AeC7I">
+            <property role="2AeC7O" value="1" />
+          </node>
+          <node concept="2AeC7N" id="5Eg5JaKdxcj" role="2AeC7K">
+            <property role="2AeC7O" value="1" />
+          </node>
         </node>
       </node>
     </node>

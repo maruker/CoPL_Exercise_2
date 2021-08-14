@@ -84,6 +84,7 @@
     <property role="EcuMT" value="2194840203816683475" />
     <property role="TrG5h" value="VariableDeclaration" />
     <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="5zzQG3YSgAM" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -232,6 +233,7 @@
   <node concept="1TIwiD" id="5zzQG3YSeSZ">
     <property role="EcuMT" value="6405203617495707199" />
     <property role="TrG5h" value="ExpressionStatement" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="5zzQG3YSeT0" role="PzmwI">
       <ref role="PrY4T" node="5zzQG3YSeSW" resolve="IStatement" />
     </node>
@@ -320,7 +322,7 @@
     <property role="EcuMT" value="7683169211582389368" />
     <property role="3GE5qa" value="expression.boolean" />
     <property role="TrG5h" value="BooleanReference" />
-    <ref role="1TJDcQ" node="6Ew6r3lDJHd" resolve="BooleanExpression" />
+    <ref role="1TJDcQ" node="1DQJKnLEeGF" resolve="Expression" />
     <node concept="1TJgyj" id="6Ew6r3l_xLT" role="1TKVEi">
       <property role="IQ2ns" value="7683169211582389369" />
       <property role="20kJfa" value="ref" />
