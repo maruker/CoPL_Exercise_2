@@ -12,6 +12,10 @@
       </concept>
     </language>
     <language id="2101cba8-c59b-492a-be83-2a9e24bb3df8" name="SoSe21">
+      <concept id="7855388964638772203" name="SoSe21.structure.BinaryBooleanExpression" flags="ng" index="2$OF_f">
+        <child id="6405203617495643357" name="left" index="2Af2St" />
+        <child id="6405203617495643359" name="right" index="2Af2Sv" />
+      </concept>
       <concept id="6405203617495707199" name="SoSe21.structure.ExpressionStatement" flags="ng" index="2A0NjZ">
         <child id="6405203617495707202" name="expression" index="2A0Ni2" />
       </concept>
@@ -41,10 +45,29 @@
         <child id="2194840203816625902" name="statements" index="11islB" />
       </concept>
       <concept id="5138703947146645501" name="SoSe21.structure.ParameterInt" flags="ng" index="38KDvY" />
+      <concept id="5138703947147026625" name="SoSe21.structure.ParamRefInt" flags="ng" index="38Mfz2">
+        <reference id="5138703947147026626" name="ref" index="38Mfz1" />
+      </concept>
+      <concept id="5138703947147026628" name="SoSe21.structure.ParameterRefBool" flags="ng" index="38Mfz7">
+        <reference id="5138703947147026629" name="ref" index="38Mfz6" />
+      </concept>
+      <concept id="5138703947147230417" name="SoSe21.structure.NewFunctionCall" flags="ng" index="38MYji">
+        <reference id="5138703947147230418" name="function" index="38MYjh" />
+        <child id="5138703947147826191" name="paramValues" index="38X8Kc" />
+      </concept>
       <concept id="5138703947145508859" name="SoSe21.structure.NewFunction" flags="ng" index="38OiZS">
+        <child id="5138703947146834222" name="returnValue" index="38Lu$H" />
+        <child id="5138703947145508862" name="body" index="38OiZX" />
         <child id="5138703947145508860" name="parameters" index="38OiZZ" />
+        <child id="6525741091659009798" name="returnType" index="3E4lBO" />
       </concept>
       <concept id="5138703947146453611" name="SoSe21.structure.ParameterBool" flags="ng" index="38RVDC" />
+      <concept id="5138703947148446388" name="SoSe21.structure.ParamDeclarationInteger" flags="ng" index="38ZxaR">
+        <property id="5138703947148446389" name="value" index="38ZxaQ" />
+      </concept>
+      <concept id="6525741091659009794" name="SoSe21.structure.IntReturnType" flags="ng" index="3E4lBK" />
+      <concept id="6525741091659009795" name="SoSe21.structure.BoolReturnType" flags="ng" index="3E4lBL" />
+      <concept id="2727876210187066979" name="SoSe21.structure.LessThanExpression" flags="ng" index="3QEKam" />
     </language>
   </registry>
   <node concept="11j_wu" id="1TPCS_vfcot">
@@ -136,18 +159,75 @@
         </node>
       </node>
     </node>
-    <node concept="2A0NjZ" id="5Eg5JaKfnyc" role="11islB">
-      <node concept="2Af2TP" id="5Eg5JaKgdxo" role="2A0Ni2">
-        <node concept="2AeC7N" id="5Eg5JaKgdxp" role="2AeC7I">
+    <node concept="2A0NjZ" id="5Eg5JaKxsM$" role="11islB">
+      <node concept="3QEKam" id="5Eg5JaKxsNi" role="2A0Ni2">
+        <node concept="2AeC7N" id="5Eg5JaKxsNr" role="2Af2Sv">
           <property role="2AeC7O" value="1" />
         </node>
-        <node concept="2Afkus" id="5Eg5JaKgdxq" role="2AeC7K">
-          <node concept="2AeC7N" id="5Eg5JaKgdxr" role="2AeC7I">
+        <node concept="2AeC7N" id="5Eg5JaKxsMz" role="2Af2St">
+          <property role="2AeC7O" value="1" />
+        </node>
+      </node>
+    </node>
+    <node concept="38OiZS" id="5Eg5JaKgiGn" role="11islB">
+      <property role="TrG5h" value="sum" />
+      <node concept="2A0NjZ" id="5Eg5JaKjBzP" role="38OiZX">
+        <node concept="2Af2TP" id="5Eg5JaKjBzU" role="2A0Ni2">
+          <node concept="2AeC7N" id="5Eg5JaKjB$8" role="2AeC7K">
             <property role="2AeC7O" value="1" />
           </node>
-          <node concept="2AeC7N" id="5Eg5JaKgdxs" role="2AeC7K">
-            <property role="2AeC7O" value="5" />
+          <node concept="2AeC7N" id="5Eg5JaKjBzO" role="2AeC7I">
+            <property role="2AeC7O" value="1" />
           </node>
+        </node>
+      </node>
+      <node concept="2A0NjZ" id="5Eg5JaK$6er" role="38OiZX">
+        <node concept="38Mfz2" id="5Eg5JaK$6ep" role="2A0Ni2">
+          <ref role="38Mfz1" node="5Eg5JaKgiHc" resolve="one" />
+        </node>
+      </node>
+      <node concept="2A0NjZ" id="5Eg5JaK$YVe" role="38OiZX">
+        <node concept="38Mfz7" id="5Eg5JaK$YVc" role="2A0Ni2">
+          <ref role="38Mfz6" node="5Eg5JaKylEa" resolve="bool_param" />
+        </node>
+      </node>
+      <node concept="38KDvY" id="5Eg5JaKgiHc" role="38OiZZ">
+        <property role="TrG5h" value="one" />
+      </node>
+      <node concept="38KDvY" id="5Eg5JaKgiHh" role="38OiZZ">
+        <property role="TrG5h" value="two" />
+      </node>
+      <node concept="2Af2TP" id="5Eg5JaKjBxt" role="38Lu$H">
+        <node concept="38Mfz2" id="5Eg5JaKjBxV" role="2AeC7K">
+          <ref role="38Mfz1" node="5Eg5JaKgiHh" resolve="two" />
+        </node>
+        <node concept="38Mfz2" id="5Eg5JaKjBy8" role="2AeC7I">
+          <ref role="38Mfz1" node="5Eg5JaKgiHc" resolve="one" />
+        </node>
+      </node>
+      <node concept="3E4lBK" id="5Eg5JaKxsGk" role="3E4lBO" />
+    </node>
+    <node concept="38MYji" id="5Eg5JaKvq_z" role="11islB">
+      <ref role="38MYjh" node="5Eg5JaKgiGn" resolve="sum" />
+      <node concept="38ZxaR" id="5Eg5JaKvs0$" role="38X8Kc">
+        <property role="38ZxaQ" value="2" />
+      </node>
+      <node concept="38ZxaR" id="5Eg5JaKxsKo" role="38X8Kc">
+        <property role="38ZxaQ" value="1" />
+      </node>
+    </node>
+    <node concept="38OiZS" id="5Eg5JaKxsKy" role="11islB">
+      <property role="TrG5h" value="test" />
+      <node concept="38RVDC" id="5Eg5JaKylEa" role="38OiZZ">
+        <property role="TrG5h" value="bool_param" />
+      </node>
+      <node concept="3E4lBL" id="5Eg5JaKxsLd" role="3E4lBO" />
+      <node concept="38Mfz7" id="5Eg5JaK$6ec" role="38Lu$H">
+        <ref role="38Mfz6" node="5Eg5JaKylEa" resolve="bool_param" />
+      </node>
+      <node concept="2A0NjZ" id="5Eg5JaK$YV0" role="38OiZX">
+        <node concept="38Mfz2" id="5Eg5JaK$YUZ" role="2A0Ni2">
+          <ref role="38Mfz1" node="5Eg5JaKgiHc" resolve="one" />
         </node>
       </node>
     </node>
