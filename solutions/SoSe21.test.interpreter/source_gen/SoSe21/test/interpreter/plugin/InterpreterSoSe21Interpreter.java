@@ -137,6 +137,8 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
+          System.err.println("Evaluating +");
+          System.err.println(SLinkOperations.getTarget(node, LINKS.left$u$6L));
           int leftValue = (int) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.left$u$6L), context, coverage, trace, false);
           int rightValue = (int) context.getRootInterpreter().evaluate(SLinkOperations.getTarget(node, LINKS.right$x2fj), context, coverage, trace, false);
 
@@ -265,6 +267,7 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
+          System.err.println(node);
           int referenceValue = ParameterValuesSingleton.getIntegerValues().get(SPropertyOperations.getString(SLinkOperations.getTarget(node, LINKS.ref$HscL), PROPS.name$MnvL));
           System.err.println("Got value " + referenceValue + " of variable " + SPropertyOperations.getString(SLinkOperations.getTarget(node, LINKS.ref$HscL), PROPS.name$MnvL));
           return referenceValue;
@@ -296,6 +299,9 @@ public class InterpreterSoSe21Interpreter extends InterpreterBase {
           coverage.visitedEvaluator(this);
           coverage.visitedConcept(this.concept);
           coverage.visitedConcept(SNodeOperations.getConcept(node));
+          System.err.println("Evaluating int");
+          System.err.println(SPropertyOperations.getString(node, PROPS.name$MnvL));
+          System.err.println(SPropertyOperations.getInteger(node, PROPS.value$TdXp));
           ParameterValuesSingleton.getIntegerValues().set(SPropertyOperations.getString(node, PROPS.name$MnvL), SPropertyOperations.getInteger(node, PROPS.value$TdXp), true);
           return 0;
         } catch (StopAndReturnException stop) {

@@ -15,6 +15,7 @@ public class EvalHelper {
     try {
       // Reset all values before interpreting 
       ParameterValuesSingleton.getIntegerValues().clear();
+      ParameterValuesSingleton.getBooleanValues().clear();
 
       // Interpret the whole worksheet to save the values of variables 
       helper.evaluate(SNodeOperations.getNodeAncestor(n, CONCEPTS.Worksheet$QJ, false, false));

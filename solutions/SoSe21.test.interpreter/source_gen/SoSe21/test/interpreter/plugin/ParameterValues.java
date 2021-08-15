@@ -10,6 +10,10 @@ public class ParameterValues<T> {
   private LinkedList<HashMap<String, T>> values = new LinkedList<HashMap<String, T>>();
   private LinkedList<HashMap<String, T>> functionParameters = new LinkedList<HashMap<String, T>>();
 
+  public ParameterValues() {
+    values.add(new HashMap<String, T>());
+  }
+
   public void enterScope() {
     values.push(new HashMap<String, T>());
   }
@@ -22,6 +26,7 @@ public class ParameterValues<T> {
     if (instanciate) {
       // Since we are instanciating the value, we can set it in the current scope, 
       // even if it exists in a different scope 
+      System.err.println(values.get(0));
       values.peek().put(name, value);
       return;
     }
@@ -52,6 +57,7 @@ public class ParameterValues<T> {
   public void clear() {
     values.clear();
     functionParameters.clear();
+    values.add(new HashMap<String, T>());
   }
 
   public void enterFunctionCall() {
