@@ -1,8 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="ConstraintsAspectDescriptor.java">
-      <unit at="10,0,20,0" name="TestSuite.constraints.ConstraintsAspectDescriptor" />
+      <unit at="13,0,29,0" name="TestSuite.constraints.ConstraintsAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:63710b12-8b81-4688-b4eb-263ed7c8c6cb(TestSuite.constraints)/6141193147682952553">
+    <file name="TestCase_Constraints.java">
+      <node id="6141193147682952553" at="24,33,25,32" concept="11" />
+      <node id="6141193147682952553" at="32,128,33,133" concept="5" />
+      <node id="6141193147682952553" at="33,133,34,0" concept="8" />
+      <node id="6141193147682952553" at="35,55,36,72" concept="2" />
+      <node id="6141193147682952553" at="37,9,38,0" concept="8" />
+      <node id="6141193147682952553" at="38,0,39,22" concept="6" />
+      <node id="6141193147682956609" at="44,5,45,46" concept="5" />
+      <node id="6141193147682959286" at="46,87,47,97" concept="7" />
+      <node id="6141193147683308002" at="47,97,48,92" concept="5" />
+      <node id="6141193147682959146" at="49,78,50,23" concept="6" />
+      <node id="6141193147682953855" at="53,5,54,16" concept="6" />
+      <node id="6141193147682952553" at="56,0,57,0" concept="9" trace="canBeParentBreakingPoint" />
+      <node id="6141193147682952553" at="59,0,60,0" concept="9" trace="TestCase$$k" />
+      <node id="6141193147682952553" at="60,0,61,0" concept="9" trace="NewFunctionCall$Pm" />
+      <node id="6141193147682952553" at="64,0,65,0" concept="9" trace="function$G2tL" />
+      <node id="6141193147682952553" at="68,0,69,0" concept="9" trace="nonpure$ToqM" />
+      <node id="6141193147682952553" at="24,0,27,0" concept="1" trace="TestCase_Constraints#()V" />
+      <node id="6141193147682952553" at="34,0,37,9" concept="3" />
+      <node id="6141193147682957062" at="48,92,51,9" concept="3" />
+      <node id="6141193147682956609" at="45,46,52,7" concept="3" />
+      <node id="6141193147682952553" at="31,0,41,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeParent;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="6141193147682956609" at="43,128,53,5" concept="0" />
+      <node id="6141193147682952553" at="29,105,41,6" concept="6" />
+      <node id="6141193147682952553" at="43,0,56,0" concept="10" trace="staticCanBeAParent#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="6141193147682952553" at="28,0,43,0" concept="4" trace="calculateCanBeParentConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="6141193147682952553" at="24,33,25,32" />
+      <scope id="6141193147682952553" at="35,55,36,72" />
+      <scope id="6141193147682957064" at="49,78,50,23" />
+      <scope id="6141193147682952553" at="24,0,27,0" />
+      <scope id="6141193147682956613" at="46,87,51,9">
+        <var name="newFunction" id="6141193147683308005" />
+      </scope>
+      <scope id="6141193147682952553" at="32,128,39,22">
+        <var name="result" id="6141193147682952553" />
+      </scope>
+      <scope id="6141193147682956609" at="44,5,52,7">
+        <var name="newFunctionCall" id="6141193147682956609" />
+      </scope>
+      <scope id="6141193147682952553" at="31,0,41,0">
+        <var name="checkingNodeContext" id="6141193147682952553" />
+        <var name="context" id="6141193147682952553" />
+      </scope>
+      <scope id="6141193147682952555" at="43,128,54,16" />
+      <scope id="6141193147682952553" at="29,105,41,6" />
+      <scope id="6141193147682952553" at="43,0,56,0">
+        <var name="childConcept" id="6141193147682952553" />
+        <var name="childNode" id="6141193147682952553" />
+        <var name="link" id="6141193147682952553" />
+        <var name="node" id="6141193147682952553" />
+      </scope>
+      <scope id="6141193147682952553" at="28,0,43,0" />
+      <unit id="6141193147682952553" at="63,0,66,0" name="TestSuite.constraints.TestCase_Constraints$LINKS" />
+      <unit id="6141193147682952553" at="67,0,70,0" name="TestSuite.constraints.TestCase_Constraints$PROPS" />
+      <unit id="6141193147682952553" at="58,0,62,0" name="TestSuite.constraints.TestCase_Constraints$CONCEPTS" />
+      <unit id="6141193147682952553" at="30,15,41,5" name="TestSuite.constraints.TestCase_Constraints$1" />
+      <unit id="6141193147682952553" at="23,0,71,0" name="TestSuite.constraints.TestCase_Constraints" />
     </file>
   </root>
 </debug-info>

@@ -2,6 +2,7 @@
 <dependenciesRoot>
   <dependency className="TestSuite.Language">
     <classNode dependClassName="TestSuite.behavior.BehaviorAspectDescriptor" />
+    <classNode dependClassName="TestSuite.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="TestSuite.editor.EditorAspectDescriptorImpl" />
     <classNode dependClassName="TestSuite.structure.ConceptPresentationAspectImpl" />
     <classNode dependClassName="TestSuite.structure.StructureAspectDescriptor" />
@@ -14,6 +15,7 @@
     <classNode dependClassName="jetbrains.mps.smodel.language.LanguageExtensions" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ConceptPresentationAspect" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.ConstraintsAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ILanguageAspect" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.StructureAspectDescriptor" />
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />

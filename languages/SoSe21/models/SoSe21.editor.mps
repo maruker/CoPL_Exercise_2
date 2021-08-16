@@ -103,6 +103,7 @@
         <child id="8207263695491670784" name="priority" index="2EmURo" />
       </concept>
       <concept id="8207263695491691232" name="com.mbeddr.mpsutil.grammarcells.structure.SubconceptExpression" flags="ng" index="2EmZKS" />
+      <concept id="7363578995839203705" name="com.mbeddr.mpsutil.grammarcells.structure.FlagCell" flags="sg" stub="1984422498400729024" index="1kHk_G" />
       <concept id="7363578995839435357" name="com.mbeddr.mpsutil.grammarcells.structure.WrapperCell" flags="ng" index="1kIj98">
         <child id="7363578995839435358" name="wrapped" index="1kIj9b" />
       </concept>
@@ -596,6 +597,9 @@
       <node concept="l2Vlx" id="4tgm0efwok$" role="2iSdaV" />
       <node concept="3F0ifn" id="4tgm0efwok_" role="3EZMnx">
         <property role="3F0ifm" value="def" />
+      </node>
+      <node concept="1kHk_G" id="5kTTE5wFale" role="3EZMnx">
+        <ref role="1NtTu8" to="umuk:5kTTE5wFamA" resolve="nonpure" />
       </node>
       <node concept="3F0A7n" id="4tgm0efwokA" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
