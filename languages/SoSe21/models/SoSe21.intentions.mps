@@ -13,6 +13,10 @@
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
+        <child id="1197027771414" name="operand" index="2Oq$k0" />
+        <child id="1197027833540" name="operation" index="2OqNvi" />
+      </concept>
       <concept id="1137021947720" name="jetbrains.mps.baseLanguage.structure.ConceptFunction" flags="in" index="2VMwT0">
         <child id="1137022507850" name="body" index="2VODD2" />
       </concept>
@@ -69,6 +73,11 @@
         <child id="5721587534047265374" name="message" index="9lYJi" />
       </concept>
     </language>
+    <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="1138056143562" name="jetbrains.mps.lang.smodel.structure.SLinkAccess" flags="nn" index="3TrEf2">
+        <reference id="1138056516764" name="link" index="3Tt5mk" />
+      </concept>
+    </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
@@ -77,12 +86,12 @@
   </registry>
   <node concept="2S6QgY" id="5zzQG3YTX36">
     <property role="TrG5h" value="EvaluateArithmeticExpression" />
-    <ref role="2ZfgGC" to="umuk:5zzQG3YQlGH" resolve="BinaryArithmeticExpression" />
+    <ref role="2ZfgGC" to="umuk:5zzQG3YSeSZ" resolve="ExpressionStatement" />
     <node concept="2S6ZIM" id="5zzQG3YTX37" role="2ZfVej">
       <node concept="3clFbS" id="5zzQG3YTX38" role="2VODD2">
         <node concept="3clFbF" id="5zzQG3YTX88" role="3cqZAp">
           <node concept="Xl_RD" id="5zzQG3YTX87" role="3clFbG">
-            <property role="Xl_RC" value="Evaluate the arithmetic expression" />
+            <property role="Xl_RC" value="Evaluate the expression" />
           </node>
         </node>
       </node>
@@ -96,7 +105,12 @@
             <node concept="2YIFZM" id="6Ew6r3lIU4i" role="33vP2m">
               <ref role="37wK5l" to="ezy0:1j2xzWWlDUj" resolve="eval" />
               <ref role="1Pybhc" to="ezy0:1j2xzWWlD$e" resolve="EvalHelper" />
-              <node concept="2Sf5sV" id="6Ew6r3lIU4K" role="37wK5m" />
+              <node concept="2OqwBi" id="78poSXepEq4" role="37wK5m">
+                <node concept="2Sf5sV" id="6Ew6r3lIU4K" role="2Oq$k0" />
+                <node concept="3TrEf2" id="78poSXepE_R" role="2OqNvi">
+                  <ref role="3Tt5mk" to="umuk:5zzQG3YSeT2" resolve="expression" />
+                </node>
+              </node>
             </node>
           </node>
         </node>
